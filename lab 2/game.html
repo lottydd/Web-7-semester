@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Онлайн игра в шашки">
+    <title>Игровое поле</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Стили для нумерации строк и столбцов */
+        .row-number, .col-letter {
+            text-align: center;
+            font-weight: bold;
+            background-color: #B3AB9C;
+            width: 30px;
+            height: 30px;
+        }
+
+        .row-number:before {
+            content: attr(data-row-number);
+        }
+
+        .col-letter:before {
+            content: attr(data-col-letter);
+        }
+
+        /* Остальные стили оставляем без изменений */
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            max-width: 600px; /* Задаем максимальную ширину таблицы */
+            margin: -1 auto; /* Чтобы таблица была по центру страницы */
+        }
+
+        table, th, td {
+            border: 1px solid black;
+        }
+
+        th, td {
+            padding: 0; /* Убираем отступы в ячейках */
+            text-align: center;
+        }
+
+        .board {
+            margin-top: 10px; /* Изменено для отступа сверху */
+        }
+
+        .cell {
+            width: 12.5%; /* 100% / 8 колонок = 12.5% */
+            padding-bottom: 12.5%; /* Устанавливаем высоту так, чтобы создать квадрат */
+            background-color: #eee;
+            border: 1px solid #000000;
+            box-sizing: border-box; /* Учитываем границу в общей ширине и высоте */
+        }
+
+        .dark {
+            background-color: #000000;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Игра в шашки онлайн</h1>
+    <nav>
+        <ul>
+            <li><a href="main.html">Главная</a></li>
+            <li><a href="rules.html">Правила игры</a></li>
+            <li><a href="game.html">Играть</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section id="game">
+        <h2>Игровое поле</h2>
+        <table class="board">
+            <!-- Первая строка с буквами -->
+            <tr>
+                <td class="col-letter" data-col-letter=""></td>
+                <td class="col-letter" data-col-letter="A"></td>
+                <td class="col-letter" data-col-letter="B"></td>
+                <td class="col-letter" data-col-letter="C"></td>
+                <td class="col-letter" data-col-letter="D"></td>
+                <td class="col-letter" data-col-letter="E"></td>
+                <td class="col-letter" data-col-letter="F"></td>
+                <td class="col-letter" data-col-letter="G"></td>
+                <td class="col-letter" data-col-letter="H"></td>
+            </tr>
+            <!-- Строки с цифрами и ячейками игрового поля -->
+            <tr>
+                <td class="row-number" data-row-number="8"></td>
+                <td class="cell dark"></td><td class="cell"></td><td class="cell dark"></td><td class="cell"></td><td class="cell dark"></td><td class="cell"></td><td class="cell dark"></td><td class="cell"></td>
+            </tr>
+            <!-- Повторяем для остальных строк -->
+            <tr>
+                <td class="row-number" data-row-number="7"></td>
+                <td class="cell"></td><td class="cell dark"></td><td class="cell"></td><td class="cell dark"></td><td class="cell"></td><td class="cell dark"></td><td class="cell"></td><td class="cell dark"></td>
+            </tr>
+            <tr>
+                <td class="row-number" data-row-number="6"></td>
+                <td class="cell dark"></td><td class="cell"></td><td class="cell dark"></td><td class="cell"></td><td class="cell dark"></td><td class="cell"></td><td class="cell dark"></td><td class="cell"></td>
+            </tr>
+            <tr>
+                <td class="row-number" data-row-number="5"></td>
+                <td class="cell"></td><td class="cell dark"></td><td class="cell"></td><td class="cell dark"></td><td class="cell"></td><td class="cell dark"></td><td class="cell"></td><td class="cell dark"></td>
+            </tr>
+            <tr>
+                <td class="row-number" data-row-number="4"></td>
+                <td class="cell dark"></td><td class="cell"></td><td class="cell dark"></td><td class="cell"></td><td class="cell dark"></td><td class="cell"></td><td class="cell dark"></td><td class="cell"></td>
+            </tr>
+            <tr>
+                <td class="row-number" data-row-number="3"></td>
+                <td class="cell"></td><td class="cell dark"></td><td class="cell"></td><td class="cell dark"></td><td class="cell"></td><td class="cell dark"></td><td class="cell"></td><td class="cell dark"></td>
+            </tr>
+            <tr>
+                <td class="row-number" data-row-number="2"></td>
+                <td class="cell dark"></td><td class="cell"></td><td class="cell dark"></td><td class="cell"></td><td class="cell dark"></td><td class="cell"></td><td class="cell dark"></td><td class="cell"></td>
+            </tr>
+            <tr>
+                <td class="row-number" data-row-number="1"></td>
+                <td class="cell"></td><td class="cell dark"></td><td class="cell"></td><td class="cell dark"></td><td class="cell"></td><td class="cell dark"></td><td class="cell"></td><td class="cell dark"></td>
+            </tr>
+        </table>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; Все права защищены.</p>
+    <p>Контакты: ваш email или телефон</p>
+</footer>
+
+</body>
+</html>

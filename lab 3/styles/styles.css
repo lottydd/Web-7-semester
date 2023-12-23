@@ -1,0 +1,93 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #B3AB9C;
+}
+
+header {
+    background-color: #705757;
+    color: white;
+    text-align: center;
+    padding: 1em;
+}
+
+#chess-board {
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+#chess-board th {
+    padding: .5em;
+}
+
+#chess-board td {
+    border: 1px solid #B3AB9C;
+    width: 5em;
+    font-size: 18px;
+    height: 5em;
+}
+
+#chess-board .light {
+    background: rgb(255, 255, 255);
+}
+
+#chess-board .dark {
+    background: rgb(0, 0, 0);
+}
+
+#chess-board img {
+    display: block;
+    width: 100%;
+}
+
+nav {
+    float: left;
+    width: 15%;
+    height: 100%;
+    background-color: #D0CDD0;
+    padding: 1em;
+    border-top-right-radius: 10px;
+    /* Закругление правого верхнего угла */
+    border-bottom-right-radius: 10px;
+    /* Закругление правого нижнего угла */
+    margin-left: -1em;
+    /*Смещение влево*/
+}
+
+
+#game-control header {
+    background-color: #B3AB9C;
+    text-align: left;
+}
+
+#history-control header {
+    text-align: left;
+    background-color: #B3AB9C;
+
+}
+nav a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 0.5em;
+    margin-bottom: 0.5em;
+    border: 1px solid white;
+    /* Белые границы по всему периметру */
+    border-radius: 5px;
+}
+
+main {
+    margin-top: 80px;
+    /* Добавляем отступ сверху */
+    margin-left: 18%;
+    padding: 1em;
+}
+
+footer {
+    clear: both;
+    padding: 1em;
+    background-color: #705757;
+    color: white;
+    text-align: center;
+}
